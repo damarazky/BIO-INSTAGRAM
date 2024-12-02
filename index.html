@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Simple</title>
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/43/91/b9/4391b931fcb0b4e8b9ae4ee468678ba7.jpg" type="image/x-icon">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        body {
+            background-image: url('./bg.gif');
+            background-size: cover;
+        }
+
+        .social-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            background-color: #38b2ac;
+            border-radius: 10%;
+            transition: all 0.3s;
+        }
+        .social-btn:hover {
+            background-image: linear-gradient(to right, #ed64a6, #f6ad55);
+        }
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+        }
+        .card {
+            background: linear-gradient(to right, #38b2ac, #4299e1);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card h5 {
+            color: white;
+        }
+    </style>
+</head>
+<body class="px-4 py-5">
+
+    <!-- Gambar Profil -->
+    <div class="flex justify-center">
+        <div class="rounded-full border-4 border-teal-500 w-40 h-40 sm:w-48 sm:h-48 bg-gray-200 shadow-md">
+            <img class="object-cover h-full w-full rounded-full" src="https://i.pinimg.com/736x/43/91/b9/4391b931fcb0b4e8b9ae4ee468678ba7.jpg" alt="">
+        </div>
+    </div>
+    <h1 class="text-3xl sm:text-4xl text-center font-bold my-3 text-white">My Blog</h1>
+    <h2 class="text-md sm:text-lg text-center font-semibold text-white mb-5">Website blog simple saya</h2>
+
+    <!-- Tombol Sosial -->
+    <div class="flex flex-wrap justify-center gap-4 mb-5">
+        <a href="https://saweria.co/damarazkynp" class="social-btn">
+            <i class='bx bx-money-withdraw text-white text-3xl'></i>
+        </a>
+        <a href="https://www.instagram.com/damarazkynp/" class="social-btn">
+            <i class='bx bxl-instagram text-white text-3xl'></i>
+        </a>
+        <a href="https://www.tiktok.com/@damarazkynp" class="social-btn">
+            <i class='bx bxl-tiktok text-white text-3xl'></i>
+        </a>
+        <a href="https://github.com/damarazky" class="social-btn">
+            <i class='bx bxl-github text-white text-3xl'></i>
+        </a>
+        <a href="https://www.linkedin.com/in/damar-azky-nazari-putra-3751a5314/?originalSubdomain=id" class="social-btn">
+            <i class='bx bxl-linkedin text-white text-3xl'></i>
+        </a>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        <!-- Card 1 -->
+        <div class="card p-3">
+            <h5 class="font-bold text-white mb-2">HISTORY APP PROJECT.</h5>
+            <video class="rounded-t-lg" loop autoplay muted>
+                <source src="/1.mp4" type="video/mp4">
+            </video>
+            <div class="py-2">
+                <h2 class="text-white font-bold text-xl mb-1">Aplikasi Desa</h2>
+                <p class="text-white font-medium text-sm tracking-wider">Ini adalah salah satu project aplikasi yang saya buat bernama Desa.</p>
+            </div>
+        </div>
+        <!-- Card p-3 2 -->
+        <div class="card p-3">
+            <h5 class="font-bold text-white mb-2">HISTORY APP PROJECT.</h5>
+            <video class="rounded-t-lg" loop autoplay muted>
+                <source src="/2.mp4" type="video/mp4">
+            </video>
+            <div class="py-2">
+                <h2 class="text-white font-bold text-xl mb-1">Curhat APK</h2>
+                <p class="text-white font-medium text-sm tracking-wider">Aplikasi ini untuk mengasah skill front-end saya.</p>
+            </div>
+        </div>
+        <!-- Card p-3 3 -->
+        <div class="card p-3">
+            <h5 class="font-bold text-white mb-2">HISTORY APP PROJECT.</h5>
+            <video class="rounded-t-lg" loop autoplay muted>
+                <source src="/3.mp4" type="video/mp4">
+            </video>
+            <div class="py-2">
+                <h2 class="text-white font-bold text-xl mb-1">Teman Baca App</h2>
+                <p class="text-white font-medium text-sm tracking-wider">Ini adalah salah satu project aplikasi saat saya magang.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <div class="bg-gradient-to-r from-teal-400 to-blue-500 p-6 rounded-lg my-5 shadow-lg mx-auto">
+        <h1 class="text-2xl text-white font-bold mb-4 text-center">Kirim Masukkan & Saran</h1>
+        <form id="telegramForm" class="space-y-4">
+            <div>
+                <label for="username" class="text-white">Nama</label>
+                <input type="text" id="username" placeholder="Masukkan nama" class="form-input">
+            </div>
+            <div>
+                <label for="message" class="text-white">Pesan</label>
+                <textarea id="message" placeholder="Masukkan pesan" rows="4" class="form-input"></textarea>
+            </div>
+            <button type="button" id="sendButton" class="w-full bg-teal-500 py-2 rounded hover:bg-blue-600 text-white shadow-md">Kirim Pesan</button>
+        </form>
+    </div>
+
+    <!-- Spotify -->
+    <iframe class="rounded-lg shadow-md" src="https://open.spotify.com/embed/playlist/1nHjzPndhkFsej2AAvwl6g?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <script>
+        document.getElementById('sendButton').addEventListener('click', function () {
+            const username = document.getElementById('username').value;
+            const message = document.getElementById('message').value;
+
+            if (!username || !message) {
+                Swal.fire('Isi semua input!', '', 'warning');
+                return;
+            }
+
+            
+            const botToken = "7148488584:AAGVe9M8We-Sb5MrbdY6PgCeGLwEju06OME";
+            const chatId = "6188172559";
+
+            // Create the message to send
+            const telegramMessage = `Dari : ${username}\n Pesan nya: ${message}`;
+
+            // Telegram API URL
+            const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+            // Send the message
+            fetch(telegramApiUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: telegramMessage
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    Swal.fire({
+                    icon: 'success',
+                    title: 'Selamat',
+                    text: 'Pesan Berhasil Terkirim!',
+                    confirmButtonColor: '#3085d6',
+                });
+
+                document.getElementById('username').value = "";
+                document.getElementById('message').value = "";
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Pesan Gagal Terkirim. Tolong coba lagi.',
+                        confirmButtonColor: '#d33',
+                    });
+                }
+            })
+            .catch(error => {
+                alert('An error occurred. Please try again.');
+                console.error(error);
+            });
+        });
+    </script>
+</body>
+</html>
